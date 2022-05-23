@@ -1,5 +1,7 @@
 ## pycon22
 
+Check slides deployed on GitHub pages at https://pisalore.github.io/pycon22/#/
+
 1. Clone this repo
    ```shell
    git clone git@github.com:pisalore/pycon22.git
