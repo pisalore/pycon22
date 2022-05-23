@@ -289,4 +289,4 @@ cython_debug/
 master_thesis/
 docs_instances.pickle
 data/
-pycon22.slides.html
+index.html
