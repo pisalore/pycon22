@@ -14733,11 +14733,11 @@ div.jp-OutputPrompt {
     <br/>
     <br/>
      <div>
-        <li>Identify the most significant parts</li>
+        <li>Identify the <strong>most significant parts</strong></li>
         <br/>
-        <li>Do text mining: extract syntactic and semantic information</li>
+        <li>Text mining: extract <strong>syntactic</strong> and <strong>semantic</strong> information</li>
         <br/>
-        <li>Exploiting state-of-the-art NLP techniques for further inference</li>
+        <li>Exploiting <strong>state-of-the-art NLP techniques</strong> for further inference</li>
     </div>
 </div>
 </div>
@@ -14822,7 +14822,7 @@ div.jp-OutputPrompt {
     <br/>
     <br/>
      <div>
-        <li><strong>Scientific papers</strong> in PDF format from ICDAR 2019 (Internation Conference od Document Analysis and Recognition)</li>
+        <li><strong>Scientific papers</strong> in PDF format from ICDAR 2019 (International Conference of Document Analysis and Recognition)</li>
         <br/>
         <li>Specific <strong>layout style</strong> (IEEE scientific articles)</li>
         <br/>
@@ -15070,7 +15070,7 @@ PDF file successfully converted.
 <ul>
 <li><p>It aligns information retrieved by <strong>PDF</strong> and <strong>XML</strong> using the <code>parse_doc</code> function</p>
 </li>
-<li><p>It save pages as <strong>PNG</strong> for method validation</p>
+<li><p>It saves pages as <strong>PNG</strong> for method validation</p>
 </li>
 <li><p>It saves annotations in <code>doc_instances.pickle</code></p>
 </li>
@@ -15126,7 +15126,7 @@ PDF file successfully converted.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="TEI-wrapper-class">TEI wrapper class<a class="anchor-link" href="#TEI-wrapper-class">&#182;</a></h2><p>This class is used by <code>parse_doc</code> for extract specific content as <strong>properties</strong></p>
+<h2 id="TEI-wrapper-class">TEI wrapper class<a class="anchor-link" href="#TEI-wrapper-class">&#182;</a></h2><p>This class is used by <code>parse_doc</code> to extract specific content as <strong>properties</strong></p>
 
 </div>
 </div>
@@ -15340,7 +15340,8 @@ PDF file successfully converted.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="COCO-annotation-example">COCO annotation example<a class="anchor-link" href="#COCO-annotation-example">&#182;</a></h3><p>A single file containing all train/validation data to be used with Transformers</p>
+<h3 id="COCO-annotation-example">COCO annotation example<a class="anchor-link" href="#COCO-annotation-example">&#182;</a></h3><p>A <strong>single file</strong> containing all train/validation data to be used with Transformers
+revolutionized</p>
 <div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;images&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"></span>
 <span class="w">            </span><span class="nt">&quot;file_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1qxE3a6GBT9ILRIQA6WzoL/1llA34vNzpDFcSV4Y1Omk2_2.png&quot;</span><span class="p">,</span><span class="w"></span>
@@ -15387,9 +15388,9 @@ PDF file successfully converted.
     </div>
     <div>
     <br>
-        <li><strong>Transformers</strong> revolutionaized the way we do NLP</li>
+        <li><strong>Transformers</strong> revolutionized the way we do NLP</li>
     <br>
-     <li>Their <strong>encoder-decoder</strong> architecture <strong>differently weights</strong> sequence inpust data significance</li>
+     <li>Their <strong>encoder-decoder</strong> architecture <strong>differently weights</strong> input sequences data significance</li>
     <br>
         <li>Could we exploit Transformers to understand <strong>instances relationship in layouts</strong>?</li>
     </div>
@@ -15405,8 +15406,8 @@ PDF file successfully converted.
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="LayoutTransformer">LayoutTransformer<a class="anchor-link" href="#LayoutTransformer">&#182;</a></h2><p><div>
-     <li>Learns <strong>layout schema</strong> and generates novel ones
-     <li><strong>Scene layout</strong> is a, unordered set of graphical primitive
+     <li>It learns <strong>layout schema</strong> and generates novel ones
+     <li><strong>Scene layout</strong> is an unordered set of graphical primitive
 </div>
 $$\mathcal{G} = (s_{&lt;bos&gt;}; s_i, x_i, y_i, w_i, h_i, s_{&lt;eos&gt;}, ..., s_n, x_n, y_n, w_n, h_n; s_{&lt;eos&gt;})$$
 <br>
@@ -15434,29 +15435,6 @@ $$\mathcal{G} = (s_{&lt;bos&gt;}; s_i, x_i, y_i, w_i, h_i, s_{&lt;eos&gt;}, ...,
 </pre></div>
 <p><br>
 We can also see real-time process progress thanks to <strong>WANDB</strong> tool: <a href="https://wandb.ai/site">https://wandb.ai/site</a></p>
-
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Training-details">Training details<a class="anchor-link" href="#Training-details">&#182;</a></h2><p><div>
-    <li> <strong>Embeddings input dimension</strong> d = 512
-    <li> <strong>Layers</strong> = 6
-    <li> <strong>Heads</strong> = 8
-    <li> <strong>Learning Rate</strong> = $4.5e-06$
-    <li> <strong>Adam optimizer</strong>
-    <li> <strong>Epochs</strong> = 25
-    <li> <strong>Batch size</strong> = 64
-    <li> <strong>Teacher forcing</strong>
-    <li> <strong>Label smoothing</strong>
-</div>
-$$ \textbf{Loss}: E_{\theta \sim Disc.}[D_{KL}(SoftMax(\theta ^L) || p(\theta ')] + \lambda E_{\theta \sim Cont.}[||\theta - \theta '||_1]$$</p>
 
 </div>
 </div>
@@ -15675,8 +15653,8 @@ $$ \textbf{Loss}: E_{\theta \sim Disc.}[D_{KL}(SoftMax(\theta ^L) || p(\theta ')
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Document-generation">Document generation<a class="anchor-link" href="#Document-generation">&#182;</a></h2><p>We have layouts, we miss contents.</p>
 <ul>
-<li>Generate text from original exploiting <strong>NLTK</strong></li>
-<li>Retrieve images, tables and equation from the web</li>
+<li>Generate text from the original exploiting <strong>NLTK</strong></li>
+<li>Retrieve images, tables and formula from the web</li>
 <li>Integrate formula in synthetic PDF with <strong>LaTeX</strong></li>
 </ul>
 
@@ -15782,9 +15760,9 @@ $$ \textbf{Loss}: E_{\theta \sim Disc.}[D_{KL}(SoftMax(\theta ^L) || p(\theta ')
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Doclab:-put-everything-together">Doclab: put everything together<a class="anchor-link" href="#Doclab:-put-everything-together">&#182;</a></h2><ul>
-<li>We iterate through annotations files end annotations themselves to fill the boxes.</li>
+<li>We iterate through <strong>annotations files</strong> end annotations themselves to fill the boxes.</li>
 <li>Core method is <code>generate_document</code></li>
-<li><code>FPDF</code> is the module which instantiates PDF files and allows to modify their content.</li>
+<li><code>FPDF</code> is the module which *<em>instantiates PDF files</em> and allows to modify their content.</li>
 </ul>
 
 </div>
