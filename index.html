@@ -14679,7 +14679,7 @@ h1, h2, h3 {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 align=center>Automatic Document Generation with Transformers for Layout Analysis Enhancement</h3>
+<h2 align=center>Automatic Document Generation </br> with Transformers </br> for Layout Analysis Enhancement</h3>
 <h3 align=center>PyCon 2022</h2>
 <h3 align=center>Florence, June 3rd 2022</h2><p><br></p>
 
@@ -14771,11 +14771,11 @@ h1, h2, h3 {
     <br/>
     <br/>
      <div>
-        <li>Identify the <strong>most significant parts</strong></li>
+        <li>Identify the most significant parts</li>
         <br/>
-        <li>Text mining: extract <strong>syntactic</strong> and <strong>semantic</strong> information</li>
+        <li>Do text mining: extract syntactic and semantic information</li>
         <br/>
-        <li>Exploiting <strong>state-of-the-art NLP techniques</strong> for further inference</li>
+        <li>Exploiting state-of-the-art NLP techniques for further inference</li>
     </div>
 </div>
 </div>
@@ -14860,11 +14860,11 @@ h1, h2, h3 {
     <br/>
     <br/>
      <div>
-        <li><strong>Scientific papers</strong> in PDF format from ICDAR 2019 (International Conference of Document Analysis and Recognition)</li>
+        <li>Scientific papers in PDF format from ICDAR 2019 (International Conference of Document Analysis and Recognition)</li>
         <br/>
-        <li>Specific <strong>layout style</strong> (IEEE scientific articles)</li>
+        <li>Specific layout style (IEEE scientific articles)</li>
         <br/>
-        <li><strong>375 PDF for 2088 pages</strong></li>
+        <li>375 PDF for 2088 pages</li>
     </div>
 </div>
 </div>
@@ -15378,8 +15378,7 @@ PDF file successfully converted.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="COCO-annotation-example">COCO annotation example<a class="anchor-link" href="#COCO-annotation-example">&#182;</a></h3><p>A <strong>single file</strong> containing all train/validation data to be used with Transformers
-revolutionized</p>
+<h3 id="COCO-annotation-example">COCO annotation example<a class="anchor-link" href="#COCO-annotation-example">&#182;</a></h3><p>A single file containing all train/validation data to be used with Transformers</p>
 <div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;images&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"></span>
 <span class="w">            </span><span class="nt">&quot;file_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1qxE3a6GBT9ILRIQA6WzoL/1llA34vNzpDFcSV4Y1Omk2_2.png&quot;</span><span class="p">,</span><span class="w"></span>
@@ -15428,7 +15427,7 @@ revolutionized</p>
     <br>
         <li><strong>Transformers</strong> revolutionized the way we do NLP</li>
     <br>
-     <li>Their <strong>encoder-decoder</strong> architecture <strong>differently weights</strong> input sequences data significance</li>
+     <li>Their <strong>encoder-decoder</strong> architecture <strong>differently weights</strong> sequence input data significance</li>
     <br>
         <li>Could we exploit Transformers to understand <strong>instances relationship in layouts</strong>?</li>
     </div>
@@ -15444,8 +15443,8 @@ revolutionized</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="LayoutTransformer">LayoutTransformer<a class="anchor-link" href="#LayoutTransformer">&#182;</a></h2><p><div>
-     <li>It learns <strong>layout schema</strong> and generates novel ones
-     <li><strong>Scene layout</strong> is an unordered set of graphical primitive
+     <li>Learns <strong>layout schema</strong> and generates novel ones
+     <li><strong>Scene layout</strong> is an unordered set of graphical primitives
 </div>
 $$\mathcal{G} = (s_{&lt;bos&gt;}; s_i, x_i, y_i, w_i, h_i, s_{&lt;eos&gt;}, ..., s_n, x_n, y_n, w_n, h_n; s_{&lt;eos&gt;})$$
 <br>
@@ -15680,8 +15679,8 @@ We can also see real-time process progress thanks to <strong>WANDB</strong> tool
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Document-generation">Document generation<a class="anchor-link" href="#Document-generation">&#182;</a></h2><p>We have layouts, we miss contents.</p>
 <ul>
-<li>Generate text from the original exploiting <strong>NLTK</strong></li>
-<li>Retrieve images, tables and formula from the web</li>
+<li>Generate text from original exploiting <strong>NLTK</strong></li>
+<li>Retrieve images, tables and equation from the web</li>
 <li>Integrate formula in synthetic PDF with <strong>LaTeX</strong></li>
 </ul>
 
@@ -15711,11 +15710,7 @@ We can also see real-time process progress thanks to <strong>WANDB</strong> tool
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">nltk</span> <span class="kn">import</span> <span class="n">word_tokenize</span><span class="p">,</span> <span class="n">TreebankWordDetokenizer</span>
-<span class="kn">from</span> <span class="nn">nltk.lm</span> <span class="kn">import</span> <span class="n">MLE</span>
-<span class="kn">from</span> <span class="nn">nltk.lm.preprocessing</span> <span class="kn">import</span> <span class="n">padded_everygram_pipeline</span>
-
-<span class="c1"># Tokenize the text.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Tokenize the text.</span>
 <span class="n">corpus</span> <span class="o">=</span> <span class="p">[</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">all_text</span><span class="p">]</span>
 <span class="c1"># Preprocess the tokenized text for 3-grams language modelling</span>
 <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span>
@@ -15761,9 +15756,7 @@ We can also see real-time process progress thanks to <strong>WANDB</strong> tool
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">detokenize</span> <span class="o">=</span> <span class="n">TreebankWordDetokenizer</span><span class="p">()</span><span class="o">.</span><span class="n">detokenize</span>
-
-<span class="k">def</span> <span class="nf">generate_sent</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">num_words</span><span class="p">,</span> <span class="n">random_seed</span><span class="o">=</span><span class="mi">42</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">generate_sent</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">num_words</span><span class="p">,</span> <span class="n">random_seed</span><span class="o">=</span><span class="mi">42</span><span class="p">):</span>
     <span class="n">content</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="n">num_words</span><span class="o">=</span><span class="n">num_words</span><span class="p">,</span> <span class="n">random_seed</span><span class="o">=</span><span class="n">random_seed</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">token</span> <span class="o">==</span> <span class="s2">&quot;&lt;s&gt;&quot;</span><span class="p">:</span>
@@ -15787,9 +15780,9 @@ We can also see real-time process progress thanks to <strong>WANDB</strong> tool
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Doclab:-put-everything-together">Doclab: put everything together<a class="anchor-link" href="#Doclab:-put-everything-together">&#182;</a></h2><ul>
-<li>We iterate through <strong>annotations files</strong> end annotations themselves to fill the boxes.</li>
+<li>We iterate through annotations files end annotations themselves to fill the boxes.</li>
 <li>Core method is <code>generate_document</code></li>
-<li><code>FPDF</code> is the module which *<em>instantiates PDF files</em> and allows to modify their content.</li>
+<li><code>FPDF</code> is the module which instantiates PDF files and allows to modify their content.</li>
 </ul>
 
 </div>
