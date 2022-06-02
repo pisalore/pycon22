@@ -14495,13 +14495,16 @@ a.anchor-link {
 .reveal {
   font-size: 160%;
 }
+.reveal table {
+  font-size: var(--jp-code-font-size);
+}
 .reveal pre {
   width: inherit;
   padding: 0.4em;
   margin: 0px;
   font-family: monospace, sans-serif;
   font-size: 80%;
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  border: 1px solid #676767A9;
 }
 .reveal pre code {
   padding: 0px;
@@ -14521,7 +14524,8 @@ a.anchor-link {
 }
 
 div.jp-InputArea-editor {
-  padding: 0.06em;
+  border: 0 !important;
+  background: none !important;
 }
 
 div.code_cell {
@@ -14534,8 +14538,28 @@ div.output_area pre {
 }
 
 div.jp-OutputPrompt {
-  /* 5px right shift to account for margin in parent container */
-  margin: 5px 5px 0 0;
+  margin: 5px 0 0 0;
+}
+
+.reveal div.highlight {
+  margin: 0;
+}
+
+.reveal div.highlight > pre {
+  margin: 0;
+  width: auto;
+  font-size: var(--jp-code-font-size);
+}
+
+.reveal div.jp-OutputArea-output {
+  padding-left: 0;
+}
+
+.reveal div.jp-OutputArea-output > pre {
+  margin: 0;
+  width: auto;
+  font-size: var(--jp-code-font-size);
+  box-shadow: none;
 }
 
 /* Reveal navigation controls */
@@ -14578,18 +14602,32 @@ div.jp-OutputPrompt {
 
 /* Scrollbars */
 
-::-webkit-scrollbar
-{
+::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
-::-webkit-scrollbar *
-{
-  background:transparent;
+::-webkit-scrollbar * {
+  background: transparent;
 }
-::-webkit-scrollbar-thumb
-{
+::-webkit-scrollbar-thumb {
   background: #727272 !important;
+}
+
+:root {
+    --jp-ui-font-size1: 20px;       /* instead of 14px */
+    --jp-content-font-size1: 20px;  /* instead of 14px */
+    --jp-code-font-size: 13px;      /* instead of 13px */
+    --jp-cell-prompt-width: 64px;  /* instead of 64px */
+}
+h1, h2, h3 {
+    text-align: center;
+    margin-left: calc( -1 * var(--jp-cell-prompt-width)) !important;
+}
+
+
+
+#Using-detectron2-by-Facebook-AI + p + .highlight > pre {
+    font-size: 11px;
 }
 </style>
 
@@ -15027,7 +15065,7 @@ div.jp-OutputPrompt {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span> <span class="n">run</span> <span class="n">master_thesis</span> <span class="o">/</span> <span class="n">main</span> <span class="o">--</span><span class="n">annotations</span><span class="o">-</span><span class="n">path</span> <span class="n">data</span> <span class="o">/</span> <span class="n">png</span> <span class="o">--</span><span class="n">pdfs</span><span class="o">-</span><span class="n">path</span> <span class="n">data</span> <span class="o">/</span> <span class="n">pdfs</span> <span class="o">--</span><span class="n">xml</span><span class="o">-</span><span class="n">path</span> <span class="n">data</span> <span class="o">/</span> <span class="n">xml</span> <span class="o">--</span><span class="n">pickle</span><span class="o">-</span><span class="n">filename</span> <span class="n">docs_instances</span><span class="o">.</span><span class="n">pickle</span> <span class="o">--</span><span class="n">debug</span> <span class="kc">True</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span> <span class="n">run</span> <span class="n">master_thesis</span><span class="o">/</span><span class="n">main</span> <span class="o">--</span><span class="n">annotations</span><span class="o">-</span><span class="n">path</span> <span class="n">data</span><span class="o">/</span><span class="n">png</span> <span class="o">--</span><span class="n">pdfs</span><span class="o">-</span><span class="n">path</span> <span class="n">data</span><span class="o">/</span><span class="n">pdfs</span> <span class="o">--</span><span class="n">xml</span><span class="o">-</span><span class="n">path</span> <span class="n">data</span><span class="o">/</span><span class="n">xml</span> <span class="o">--</span><span class="n">pickle</span><span class="o">-</span><span class="n">filename</span> <span class="n">docs_instances</span><span class="o">.</span><span class="n">pickle</span>
 </pre></div>
 
      </div>
@@ -15285,7 +15323,7 @@ PDF file successfully converted.
     <span class="nt">&lt;folder&gt;</span>1bEnBHAZurlCHlfcg65fed<span class="nt">&lt;/folder&gt;</span>
     <span class="nt">&lt;filename&gt;</span>622U0zHbbvLmKLHzTHo6gZ_0.png<span class="nt">&lt;/filename&gt;</span>
     <span class="nt">&lt;path&gt;</span>
-        /home/lorenzo/Documenti/Workshops/pycon2022/data/png/ICDAR19/1bEnBHAZurlCHlfcg65fed/622U0zHbbvLmKLHzTHo6gZ_0.png
+        /home/lorenzo/pycon2022/data/png/ICDAR19/1bEnBHAZurlCHlfcg65fed/622U0zHbbvLmKLHzTHo6gZ_0.png
     <span class="nt">&lt;/path&gt;</span>
     <span class="nt">&lt;size&gt;</span>
         <span class="nt">&lt;width&gt;</span>612<span class="nt">&lt;/width&gt;</span>
@@ -15480,27 +15518,16 @@ We can also see real-time process progress thanks to <strong>WANDB</strong> tool
     <span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">current_device</span><span class="p">()</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="s2">&quot;cpu&quot;</span>
     <span class="n">generative_model</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">DataParallel</span><span class="p">(</span><span class="n">generative_model</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
     <span class="n">loader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span>
-        <span class="n">dataset</span><span class="p">,</span>
-        <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-        <span class="n">pin_memory</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-        <span class="n">batch_size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">data</span><span class="p">),</span>
-        <span class="n">num_workers</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">dataset</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">pin_memory</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">data</span><span class="p">),</span> <span class="n">num_workers</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
     <span class="p">)</span>
     <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_gen_layouts</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">loader</span><span class="p">):</span>
             <span class="n">x_cond</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
             <span class="n">layouts</span> <span class="o">=</span> <span class="p">(</span>
                 <span class="n">sample</span><span class="p">(</span>
-                    <span class="n">generative_model</span><span class="p">,</span>
-                    <span class="n">x_cond</span><span class="p">[:,</span> <span class="p">:</span><span class="mi">6</span><span class="p">],</span>
-                    <span class="n">steps</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">max_length</span><span class="p">,</span>
-                    <span class="n">temperature</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
-                    <span class="n">sample</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-                    <span class="n">top_k</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                <span class="p">)</span>
-                    <span class="o">.</span><span class="n">detach</span><span class="p">()</span>
-                    <span class="o">.</span><span class="n">cpu</span><span class="p">()</span>
-                    <span class="o">.</span><span class="n">numpy</span><span class="p">()</span>
+                    <span class="n">generative_model</span><span class="p">,</span> <span class="n">x_cond</span><span class="p">[:,</span> <span class="p">:</span><span class="mi">6</span><span class="p">],</span> <span class="n">steps</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">max_length</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
+                    <span class="n">sample</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">top_k</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                <span class="p">)</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span>
             <span class="p">)</span>
             <span class="k">for</span> <span class="n">layout</span> <span class="ow">in</span> <span class="n">layouts</span><span class="p">:</span>
                 <span class="n">layout_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">exp_dir</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;layout_</span><span class="si">{</span><span class="n">it</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
@@ -15781,8 +15808,8 @@ We can also see real-time process progress thanks to <strong>WANDB</strong> tool
         <span class="c1"># Instantiate pdf object (fpdf)</span>
         <span class="n">pdf</span> <span class="o">=</span> <span class="n">FPDF</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="s2">&quot;pt&quot;</span><span class="p">)</span>
         <span class="n">pdf</span><span class="o">.</span><span class="n">add_page</span><span class="p">()</span>
-        <span class="c1"># Add all necessary fonts for each type of text (titles, subtitles, abstract, authors...) to let them</span>
-        <span class="c1"># available during documents writing</span>
+        <span class="c1"># Add all necessary fonts for each type of text (titles, subtitles, abstract, authors...)</span>
+        <span class="c1"># to make them available during documents writing</span>
         <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">font</span> <span class="ow">in</span> <span class="n">FONTS</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="n">pdf</span><span class="o">.</span><span class="n">add_font</span><span class="p">(</span><span class="n">font</span><span class="p">[</span><span class="s2">&quot;fontname&quot;</span><span class="p">],</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">font</span><span class="p">[</span><span class="s2">&quot;tff&quot;</span><span class="p">],</span> <span class="n">uni</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="n">filename</span> <span class="o">=</span> <span class="n">json_path</span><span class="o">.</span><span class="n">stem</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.json&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
@@ -16094,7 +16121,7 @@ We can also see real-time process progress thanks to <strong>WANDB</strong> tool
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="How?-detectron2-by-Facebook-AI">How? detectron2 by Facebook AI<a class="anchor-link" href="#How?-detectron2-by-Facebook-AI">&#182;</a></h2><p>It makes available customizable config files. The <strong>base model</strong>:</p>
+<h2 id="Using-detectron2-by-Facebook-AI">Using detectron2 by Facebook AI<a class="anchor-link" href="#Using-detectron2-by-Facebook-AI">&#182;</a></h2><p>It makes available customizable config files. The <strong>base model</strong>:</p>
 <div class="highlight"><pre><span></span><span class="nt">MODEL</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">META_ARCHITECTURE</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;GeneralizedRCNN&quot;</span><span class="w"></span>
 <span class="w">  </span><span class="nt">BACKBONE</span><span class="p">:</span><span class="w"></span>
