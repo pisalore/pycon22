@@ -21,5 +21,5 @@ You can use both `pip` or `conda`.
    ```
 7. Convert to slides
     ```shell
-   jupyter nbconvert pycon22.ipynb --to slides
+   jupyter nbconvert pycon22.ipynb --to slides --template templates/reveal/
    ```
